@@ -1,0 +1,48 @@
+doctype html
+html
+    head
+        title #{layout.title}
+        link(rel='stylesheet', href='./stylesheets/bootstrap.min.css')
+        //link(rel='stylesheet', href='./stylesheets/bootstrap-responsive.min.css')
+        link(rel='stylesheet', href='./stylesheets/blog.css')
+        script(type="text/javascript",src='javascripts/jq.js')
+        script(type="text/javascript",src='javascripts/bootstrap.min.js')
+        script(type="text/javascript",src='javascripts/blog.js')
+    body
+        div.navbar.navbar-fixed-top.navbar-inverse(role="navigation")
+            div.container
+                div.navbar-header
+                    button.navbar-toggle.collapsed(data-toggle="collapse",data-target=".nav-collapse")
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand(href="/") #{layout.topTitle}
+                div.collapse.navbar-collapse
+                    ul.nav.navbar-nav
+                        li
+                            a(href="/") #{layout.indexButton}
+                        //以下是修改后的部分
+                        if(user())
+                            li
+                                a(href="/logout") #{layout.logout}
+                        else
+                            li
+                                a(href="/login") #{layout.login}
+                            li
+                                a(href="/reg") #{layout.reg}
+                        li
+                            a(href="/language") #{layout.language}
+                    ul.nav.navbar-nav.navbar-right
+                        li
+                            if(user())
+                                a 你好！
+                                    span#userName #{user().name}
+                            else
+                                a 你的心声，世界的回声
+        div#container.container
+            - var ErrorAlert = err()
+            if(ErrorAlert)
+                div.alert.alert-error #{ErrorAlert}
+            block content
+        footer
+            p.text-center   Copyright © 2014 - 2016 Kevin. All Rights Reserved

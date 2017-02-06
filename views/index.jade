@@ -1,0 +1,90 @@
+extends layout
+block content
+    //div.hero-unit
+    //    h1  #{index.title}
+    //    div   #{index.description}
+    //        br
+    //        br
+    //        //修改以下部分
+    //        if(!user())
+    //            br
+    //            br
+    //            a.btn.btn-primary.btn-large(href="/login")  #{index.login}
+    //            a.btn.btn-large(href="/reg")    #{index.regNow}
+    //        else
+    //            p 来说说你在做什么,想什么
+    //            textarea#textarea.uneditable-input
+    //            button#postBlog.btn.btn-large #{index.submit}
+    //            button#clearBlog.btn.btn-large #{index.emptyInput}
+    //    div#submitError.alert.alert-danger.hidden.myalert
+    //    div#submitSuccess.alert.alert-success.hidden
+
+    div.row.content#content
+        div.col-sm-8.content-left
+            if(user())
+                div.col-md-12
+                    p 来说说你在做什么,想什么
+                    textarea#textarea.form-control
+                    button#postBlog.btn.btn-success.pull-right #{index.submit}
+                    button#clearBlog.btn.btn-default.pull-right #{index.emptyInput}
+                    div#submitError.alert.alert-danger.hidden.myalert
+                    div#submitSuccess.alert.alert-success.hidden
+            div.row.content-content
+                //div.col-md-12
+                //    h4.text-info  烟雨江南说
+                //    p   当欲望没有了枷锁，就没有了向前的路
+                //    p   只有转左，或者向右
+                //    p   左边是地狱，右边也是地狱
+                //    span  2015-11-10
+                //div.col-md-12
+                //    h4.text-info  烟雨江南说
+                //    p   那些都是极好极好的
+                //    p   可是我偏偏不喜欢
+                //div.col-md-12
+                //    h4.text-info  烟雨江南说
+                //    p   我不怕傻
+                //    p   只怕
+                //    p   遇不到
+                //    p   可以让我变傻的人
+                //div.col-md-12
+                //    h4.text-info  烟雨江南说
+                //    p   人在年轻的时候总会有些莫名的坚持，
+                //    p   并且以此感动着自己，
+                //    p   却时常会在不经意间让真正重要的东西从指间流走。
+                //div.col-md-12
+                //    h4.text-info  烟雨江南说
+                //    p   记忆真是一种奇怪的东西，
+                //    p   有时候会涤荡所有的苦难，只留下温情，
+                //    p   有时候却磨灭掉曾有的欢乐，唯剩下苍白和丑陋。
+                //div.col-md-12
+                //    h4.text-info  烟雨江南说
+                //    p   那存在的，都是幻影。
+                //    p   那永恒的，终将毁灭。
+                //    p   世界万物，缤纷色彩，都是被蒙蔽的人心罢了。
+                //div.col-md-12
+                //    h4.text-info  烟雨江南说
+                //    p   诸神以真相示人，而世人却视而不见
+                //div.col-md-12
+                //    h4.text-info  烟雨江南说
+                //    p   只有绵羊会向狮子要求平等，
+                //    p   而狮子们从来不会这样想。
+                //div.col-md-12
+                //    h4.text-info  烟雨江南说
+                //    p   愿迷途的旅人，从此得享安息。
+                //    p   因理想而不朽，因归返而救赎。
+            div#scrollToFoot 滚动到底部然后加载内容
+        div.col-sm-4
+            div.row
+                div.col-md-12
+                    h1  #{index.title}
+                    div   #{index.description}
+                        br
+                        br
+                        //修改以下部分
+                        if(!user())
+                            br
+                            br
+                            a.btn.btn-primary.btn-lg.btn-block(href="/login")  #{index.login}
+                            a.btn(href="/reg")    #{index.regNow}
+                        else
+                            p 来说说你在做什么,想什么

@@ -1,0 +1,67 @@
+﻿body {
+    padding-top: 70px;
+    padding-bottom: 30px;
+    background: #66a8e5
+    url(http://mat1.gtimg.com/www/mb/skin/2013/aboluo/apollo_130417_01.jpg) center top no-repeat;
+}
+
+#container{
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.content-left{
+    border-right: 1px solid #ccc;
+    padding: 20px 15px;
+    background-color: #fff;
+}
+.content-content{
+    min-height: 800px;
+}
+.content-content .col-md-12{
+    padding: 5px 15px;
+}
+.content-content .col-md-12:after{
+    content: '';
+    display: block;
+    border-bottom:1px dashed #ccc ;
+}
+
+#textarea {
+    resize: none;
+    height: 100px;
+    cursor: text;
+    margin-bottom: 10px;
+}
+
+#postBlog {
+    margin-left: 10px;
+}
+
+
+.alert {
+   width: 70%;
+    padding: 5px 15px;
+}
+
+
+#scrollToFoot {
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 18px;
+    padding: 5px 0;
+    margin-top: 10px;
+}
+
+footer p {
+    margin-top: 30px;
+    color: #fff;
+}
+
+
+.panel{
+    margin:0;
+}
+.panel-heading{
+    font-size: 18px;
+}

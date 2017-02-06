@@ -1,0 +1,49 @@
+﻿extends layout
+block content
+    script(type="text/javascript",src='javascripts/reg.js')
+    div.row
+        div.panel.panel-default
+            .panel-heading 注册
+            .panel-body
+                div.form.col-md-6
+                    div.form-group
+                        label.control-label(for='username') 用户名
+                        input.form-control#username(name='username',type='text')
+                        p.help-block#tips    你的账户名称，用于登录和提示
+                        p.help-block.hidden#usrname-error  用户名不能为空
+                        p.help-block.hidden#error-alert
+                    div.form-group
+                        label.control-label(for='password') 密码
+                        input.form-control#password(name='password',type='password')
+                        p.help-block.hidden#pw-error     密码不能为空
+                    div.form-group
+                        label.control-label(for='password-repeat') 再次输入密码
+                        input.form-control#password-repeat(type="password",name="password-repeat")
+                        p.help-block.hidden#pw-rp-error     两次密码需要一致
+                    div.form-actions
+                        button.btn.btn-primary#submit-button   注册
+    //div.form-horizontal
+    //    fieldset
+    //        legend  注册
+    //        div.control-group
+    //            label.control-label(for="username") 用户名
+    //            div.controls
+    //                input.input-xlarge#username(type="text",name="username")
+    //                p.help-block#tips    你的账户名称，用于登录和提示
+    //                p.help-block.hidden#usrname-error  用户名不能为空
+    //                p.help-block.hidden#error-alert
+    //
+    //        div.control-group
+    //            label.control-label(for="password") 口令
+    //            div.controls
+    //                input.input-xlarge#password(type="password",name="password")
+    //                p.help-block.hidden#pw-error     密码不能为空
+    //
+    //        div.control-group
+    //            label.control-label(for="password-repeat")  重复输入口令
+    //            div.controls
+    //                input.input-xlarge#password-repeat(type="password",name="password-repeat")
+    //                p.help-block.hidden#pw-rp-error     两次密码需要一致
+    //
+    //        div.form-actions
+    //            button.btn.btn-priamry#submit-button   注册

@@ -1,0 +1,20 @@
+﻿extends layout
+block content
+    script(type="text/javascript",src='javascripts/login.js')
+    div.row
+        div.panel.panel-default
+            .panel-heading 登录
+            .panel-body
+                div.form.col-md-6
+                    div.form-group
+                        label.control-label(for='username') 用户名
+                        div.controls
+                            input.form-control#username(name='username',type='text')
+                            p.help-block.hidden#name-alert
+                    div.form-group
+                        label.control-label(for='password') 密码
+                        div.controls
+                            input.form-control#password(name='password',type='password')
+                            p.help-block.hidden#pw-alert
+                    div.form-actions
+                        button.btn.btn-primary#submit 登录
